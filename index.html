@@ -129,65 +129,66 @@
 
 <!-- Game Section -->
     <section id="game" class="game">
-      <div class="cardgm">
-        <div class="card">
+      <h1>Our Best Games</h1>
+      <div class="container">
+        <div class="box" data-tilt>
           <div class="imgBx">
           <img src="assets/img/games/BeautyRace.png">
           <h5>Beauty Race!</h5>
           </div>
           <div class="content">
-            <a href="#"><i class='bx bxl-play-store' ></i></a>
-            <a href="#"><i class='bx bxl-apple' ></i></a>
+            <a href="https://bit.ly/BeautyRace" target="_blank"><i class='bx bxl-play-store' ></i></a>
+            <a href="https://bit.ly/BeautyRaceiOS" target="_blank"><i class='bx bxl-apple' ></i></a>
           </div>
         </div>
 
-        <div class="card">
+        <div class="box" data-tilt>
           <div class="imgBx">
           <img src="assets/img/games/WipeIt.png">
           <h5>Wipe It</h5>
           </div>
           <div class="content">
-            <a href="#"><i class='bx bxl-play-store' ></i></a>
-            <a href="#"><i class='bx bxl-apple' ></i></a>
+            <a href="https://bit.ly/WipeItT" target="_blank"><i class='bx bxl-play-store' ></i></a>
+            
           </div>
         </div>
 
-        <div class="card">
+        <div class="box" data-tilt>
           <div class="imgBx">
           <img src="assets/img/games/Gamelanku.png">
           <h5>Gamelanku</h5>
           </div>
           <div class="content">
-            <a href="#"><i class='bx bxl-play-store' ></i></a>
-            <a href="#"><i class='bx bxl-apple' ></i></a>
+            <a href="https://bit.ly/GamelanKu" target="_blank"><i class='bx bxl-play-store'></i></a>
+            
           </div>
         </div>
 
-        <div class="card">
+        <div class="box" data-tilt>
           <div class="imgBx">
           <img src="assets/img/games/BouncyRun.png">
           <h5>Bouncy Run</h5>
           </div>
           <div class="content">
-            <a href="#"><i class='bx bxl-play-store' ></i></a>
-            <a href="#"><i class='bx bxl-apple' ></i></a>
+            <a href="404"><i class='bx bxl-play-store' ></i></a>
+            
           </div>
         </div>
 
-        <div class="card">
+        <div class="box" data-tilt>
           <div class="imgBx">
           <img src="assets/img/games/FallingFloor.png">
           <h5>Falling Floor</h5>
           </div>
           <div class="content">
-            <a href="#"><i class='bx bxl-play-store' ></i></a>
-            <a href="#"><i class='bx bxl-apple' ></i></a>
+            <a href="https://bit.ly/FallingFloor" target="_blank"><i class='bx bxl-play-store' ></i></a>
+            
           </div>
         </div>
 
         <br>
         <br>
-      <div class="moreBtn"><a href="#contact" class="btn-get-started scrollto">Contact Us</a></div>
+      <div class="moreBtn"><a href="#contact" class="btn-get-started scrollto">All Games</a></div>
 
       </div>
     </section><!-- End Game Section -->
@@ -614,7 +615,7 @@
           </div>
 
             <div class="col-lg-6 ">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d950.4677660363318!2d106.71066082918806!3d-6.79575766801031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDcnNDQuNyJTIDEwNsKwNDInNDAuNCJF!5e1!3m2!1sid!2sid!4v1631189816291!5m2!1sid!2sid" frameborder="0" style="border:0; width: 100%; height: 330px;" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d950.4677660363318!2d106.71066082918806!3d-6.79575766801031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDcnNDQuNyJTIDEwNsKwNDInNDAuNCJF!5e1!3m2!1sid!2sid!4v1631189816291!5m2!1sid!2sid" frameborder="0" style="border:0; width: 100%; height: 500px; transform: translateY(-167px);" allowfullscreen></iframe>
           </div>
 
         </div>
@@ -631,7 +632,7 @@
       <div class="copyright-wrap d-md-flex py-4">
         <div class="me-md-auto text-center text-md-start">
           <div class="copyright">
-            &copy; Copyright <strong><span>Trimatra Studio</span></strong>. All Rights Reserved
+            &copy; Copyright 2021 <strong><span>Trimatra Studio</span></strong>. All Rights Reserved
           </div>
           </div>
         </div>
@@ -653,13 +654,14 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="assets/vendor/vanilla-tilt/vanilla-tilt.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script type="text/javascript" src="assets/js/vanilla-tilt.js"></script>
 
+  <!-- Vanilla Tilt Trigger -->
   <script>
-  VanillaTilt.init(document.querySelectorAll(".card"), {
+  VanillaTilt.init(document.querySelectorAll(".box"), {
     max: 25,
     speed: 400,
     glare: true,

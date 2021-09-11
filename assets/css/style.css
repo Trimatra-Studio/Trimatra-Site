@@ -680,28 +680,41 @@ section {
 /*--------------------------------------------------------------
 # Our Games
 --------------------------------------------------------------*/
-.cardgm{
+.game{
+  padding: 120px 0 ;
+}
+.game h1{
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  color: #fff;
+  transform: translateY(-10px);
+}
+.game .container{
   position: relative;
   z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  transform-style: preserve-3d;
 }
-.cardgm .card{
+.game .container .box{
   position: relative;
   width: 170px;
   height: 250px;
-  margin: 15px 30px;
+  margin: 15px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  backdrop-filter:  blur(15px);
+  transform-style: preserve-3d;
+
+ 
 }
-.cardgm .card .imgBx{
+.game .container .box .imgBx{
   position: relative;
   display: flex;
   justify-content: center;
@@ -709,22 +722,23 @@ section {
   flex-direction: column;
   padding: 20px;
   transition: 0.5s ease-in-out;
+
 }
-.cardgm .card:hover .imgBx{
-  transform: translateY(-60px);
+.game .container .box:hover .imgBx{
+  transform: translateZ(50px) translateY(-20px);
 }
-.cardgm .card .imgBx img{
+.game .container .box .imgBx img{
   max-width: 100%;
   margin: 0 0 15px;
   transition: 0.5s ease-in-out;
 }
 
-.cardgm .card .imgBx h5 {
+.game .container .box .imgBx h5 {
   color: #fff;
   font-weight: 600;
 }
 
-.cardgm .card .content{
+.game .container .box .content{
   position: absolute;
   bottom: 20px;
   display: flex;
@@ -735,12 +749,12 @@ section {
   visibility: hidden;
 }
 
-.cardgm .card:hover .content{
+.game .container .box:hover .content{
   opacity: 1;
   visibility: visible;
 }
 
-.cardgm .card .content a {
+.game .container .box .content a {
   position: relative;
   top: 20px;
   margin: 5px;
@@ -748,6 +762,25 @@ section {
   background-image: linear-gradient(45deg, #CF16F5, #136CE2);
   border-radius: 40px;
   color: #fff;
+}
+
+.game .container .moreBtn a{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 50px 10px 28px;
+  border-radius: 10px;
+  transition: 0.5s;
+  color: #fff;
+  margin: 30px;
+  background: linear-gradient(45deg, #5846f9 0%, #7b27d8 100%);
+  position: relative;
+}
+.game .container .moreBtn:hover a{
+ 
+  background: linear-gradient(180deg, #5846f9 0%, #7b27d8 100%);
 }
 
 /*--------------------------------------------------------------
@@ -825,16 +858,9 @@ section {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  transform-style: preserve-3d;
   overflow: hidden;
-  transform: translateZ(0px);
   border: 10px solid rgba(0, 0, 0, 0.25);
 
-}
-
-.team .container .card:hover .content .imgBx{
-  transform: perspective(1000px);
-  transform: translateZ(50px);
 }
 .team .container .card .content .imgBx img{
   position: absolute;
@@ -859,7 +885,6 @@ section {
 .team .container .card:hover .content .contentBox h3{
   opacity: 1;
   transform: translateX(0px);
-  transform: translateZ(50px) scaleY(1.0);
 }
 .team .container .card .content .contentBox h3 span {
   font-size: 12px;
@@ -894,8 +919,12 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+.portfolio{
+  color: #fff;
+}
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+  color: #fff;
 }
 
 .portfolio #portfolio-flters {
@@ -1092,7 +1121,7 @@ section {
 }
 
 .contact .info-box {
-  background-image: linear-gradient(180deg, #B70FFF 50% 55%, #FD1FF5 20% 25%);
+  background-image: linear-gradient( #B70FFF, #FD1FF5 );
   text-align: center;
   padding: 20px 0 30px 0;
   align-items: center;
@@ -1284,8 +1313,9 @@ section {
 #footer {
   color: #fff;
   font-size: 14px;
-  background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%);
+  background:rgba (57, 2, 112, 0.5);
   background-size: cover;
+  text-align: center;
 }
 
 #footer .footer-top {
@@ -1395,7 +1425,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: rgba(123, 39, 216, 0.8);
+  background: rgba(62, 2, 131, 0.8);
   color: #fff;
   transition: 0.3s;
   border-radius: 0 5px 5px 0;
@@ -1403,11 +1433,12 @@ section {
 }
 
 #footer .footer-newsletter form input[type="submit"]:hover {
-  background: #5846f9;
+  background: #7B00C2;
 }
 
 #footer .copyright-wrap {
-  border-top: 1px solid #7B00C2;
+  border-top: 1px solid #7b00c2;
+  align-items: center;
 }
 
 #footer .credits {
