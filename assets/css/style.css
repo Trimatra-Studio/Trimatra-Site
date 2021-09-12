@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 #header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 20px 0;
+  padding: 4px 0;
 }
 
 #header.header-scrolled, #header.header-inner-pages {
@@ -137,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-backdrop-filter: blur( 2px );
   border-radius: 0px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
-  padding: 12px 0;
+  padding: 2px 0;
 }
 
 #header .logo {
@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar > ul > li {
-  padding: 10px 0 10px 24px;
+  padding: 0px 0 0px 24px;
 }
 
 .navbar a, .navbar a:focus {
@@ -190,8 +190,8 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   padding: 0 3px;
   font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
   transition: 0.3s;
@@ -227,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar .getstarted {
-  padding: 8px 25px;
+  padding: 0px 25px;
   margin-left: 30px;
   border-radius: 5px;
   color: #fff;
@@ -599,7 +599,7 @@ section {
 }
 
 .bfabout .content h1 {
-  font-size: 40px;
+  font-size: 24px;
   display: block;
   color: #fff;
   font-weight: 400;
@@ -694,12 +694,13 @@ section {
 .game .container .box{
   position: relative;
   width: 170px;
-  height: 250px;
+  height: 200px;
   margin: 15px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 30px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   transform-style: preserve-3d;
@@ -711,68 +712,92 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateY(5px);
   flex-direction: column;
   padding: 20px;
-  transition: 0.5s ease-in-out;
+  transition: 0.1s ease-in-out;
 
 }
 .game .container .box:hover .imgBx{
-  transform: translateZ(50px) translateY(-20px);
+  transform: translateZ(70px);
 }
 .game .container .box .imgBx img{
   max-width: 100%;
   margin: 0 0 15px;
-  transition: 0.5s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
+.game .container .box:hover .imgBx img{
 
+  max-width: 80%;
+  transform: translateY(-10px);
+
+}
 .game .container .box .imgBx h5 {
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 15px;
 }
-
+.game .container .box:hover .imgBx h5 {
+  display: none;
+}
 .game .container .box .content{
   position: absolute;
   bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
   opacity: 0;
   visibility: hidden;
 }
 
 .game .container .box:hover .content{
   opacity: 1;
+  transform: translateY(15px);
   visibility: visible;
 }
 
 .game .container .box .content a {
   position: relative;
-  top: 20px;
-  margin: 5px;
-  padding: 15px 20px;
-  background-image: linear-gradient(45deg, #CF16F5, #136CE2);
-  border-radius: 40px;
+  top: 5px;
+  margin: 3px;
+  padding: 3px 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 15px;
+  transition: 0.1s;
+}
+.game .container .box .content a:hover {
+  background-color: rgba(29, 102, 230, 1);
+  border: none;
   color: #fff;
 }
 
-.game .container .moreBtn a{
+.game .container .btn a{
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 50px 10px 28px;
-  border-radius: 10px;
-  transition: 0.5s;
+  text-align: center;
   color: #fff;
-  margin: 30px;
-  background: linear-gradient(45deg, #5846f9 0%, #7b27d8 100%);
-  position: relative;
+  
 }
-.game .container .moreBtn:hover a{
+.game .container .btn:hover {
  
-  background: linear-gradient(180deg, #5846f9 0%, #7b27d8 100%);
+  background-color: rgba(29, 102, 230, 1);
+  padding: 9px 24px 9px 27px;
+  transform: translateY(1px);
+}
+
+.game .container .btn{
+  padding: 10px 25px 10px 28px;
+  border-radius: 10px;
+  transition: 0.1s;
+  top: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  position: relative;
 }
 
 /*--------------------------------------------------------------
@@ -817,33 +842,37 @@ section {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  transform-style: preserve-3d;
 }
 .team .container .card{
   position: relative;
   width: 200px;
-  height: 350px;
+  height: 250px;
   background: rgba(225, 225, 225, 0.05);
   margin: 10px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 30px;
   display: flex;
   justify-content: center;
-
-  backdrop-filter: blur(10px); 
+  transform-style: preserve-3d;
 }
-
+.team .container .card:hover{
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
 .team .container .card .content{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  opacity: 0.5;
-  transition: 0.5s;
+  opacity: 1;
+  transition: 0.1s;
 }
 .team .container .card:hover .content{
   opacity: 1;
-  transform: translateY(-20px);
+  transform: translateZ(50px) translateY(-10px);
 }
 .team .container .card .content .imgBx{
   position: relative;
@@ -851,8 +880,14 @@ section {
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  border: 10px solid rgba(0, 0, 0, 0.25);
-
+  transform: translateY(10px);
+  border: 10px solid rgba(255, 255, 255, 0.2);
+}
+.team .container .card:hover .content .imgBx{
+  width: 130px;
+  height: 130px;
+  opacity: 1;
+  border: 10px solid rgba(255, 255, 255, 0.9);
 }
 .team .container .card .content .imgBx img{
   position: absolute;
@@ -867,27 +902,39 @@ section {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   margin: 20px 0 10px;
   line-height: 1.1em;
-  opacity: 0;
-  transform: translateX(10px);
+  opacity: 1;
 }
 .team .container .card:hover .content .contentBox h3{
-  opacity: 1;
-  transform: translateX(0px);
+  display: none;
 }
-.team .container .card .content .contentBox h3 span {
-  font-size: 12px;
+
+.team .container .card .content .contentBox h5 {
+  font-size: 14px;
   color: #fff;
   text-align: center;
   font-weight: 300;
+  opacity: 0.4;
+  transform: translateY(0px);
+  text-transform: initial;
+}
+.team .container .card:hover .content .contentBox h5 {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  opacity: 1;
+  transform: translateY(20px);
+  font-weight: 500;
   text-transform: initial;
 }
 .team .container .card .sci{
-  position: absolute;
-  bottom: 15px;
+  position: relative;
+  text-align: center;
+  transform: translateY(20px) translateX(-15px);
+  bottom: 0px;
   display: flex;
   
 }
@@ -895,17 +942,18 @@ section {
   list-style: none;
   margin: 0 3px;
   transform: translateY(0px);
-  transition: 0.5s;
-  opacity: 0;
+  transition: 0.2s;
+  display: none;
   transition-delay: calc(0.1s * var(--i));
 }
 .team .container .card:hover .sci li{
-  transform: translateY(0px);
-  opacity: 1;
-}
+  display: flex;}
 .team .container .card .sci li a{
   color: #fff;
   font-size: 24px;
+}
+.team .container .card .sci li a:hover{
+  color: #406CE6;
 }
 
 /*--------------------------------------------------------------
@@ -936,7 +984,7 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #444444;
+  color: #fff;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
@@ -955,18 +1003,21 @@ section {
 .portfolio .portfolio-wrap {
   transition: 0.3s;
   position: relative;
+  
+  border-radius: 10px;
   overflow: hidden;
   z-index: 1;
 }
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: rgba(88, 70, 249, 0.8);
+  background: rgba(27, 7, 211, 0.8);
   position: absolute;
   left: 30px;
   right: 30px;
   top: 30px;
   bottom: 30px;
+  border-radius: 10px;
   transition: all ease-in-out 0.3s;
   z-index: 2;
   opacity: 0;
@@ -1057,11 +1108,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #5846f9;
+  border: 1px solid #2613ce;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #5846f9;
+  background-color: #2818b8;
 }
 
 .portfolio-details .portfolio-info {
@@ -1305,7 +1356,7 @@ section {
 #footer {
   color: #fff;
   font-size: 14px;
-  background:rgba (57, 2, 112, 0.5);
+  background: rgba (57, 2, 112, 0.5);
   background-size: cover;
   text-align: center;
 }
@@ -1443,3 +1494,12 @@ section {
   color: #fff;
 }
 
+.js-tilt-glare{
+
+  border-radius: 30px;
+
+}
+.js-tilt-glare .btn{
+  border-radius: none;
+
+}
