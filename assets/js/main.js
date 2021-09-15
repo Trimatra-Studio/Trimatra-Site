@@ -264,3 +264,22 @@
   });
 
 })()
+
+  VanillaTilt.init(document.querySelectorAll(".box"), {
+    max: 25,
+    speed: 400,
+    glare: true,
+    "max-glare":1
+  });
+  VanillaTilt.init(document.querySelectorAll(".card"), {
+    max: 25,
+    speed: 400,
+    glare: true,
+    "max-glare":0.6
+  });
+  VanillaTilt.init(document.querySelectorAll(".btn"), {
+    max: 0,
+    speed: 0,
+    glare: true,
+    "max-glare":0.4
+  });
