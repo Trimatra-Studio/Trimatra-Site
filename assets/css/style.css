@@ -10,7 +10,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  background-image: linear-gradient(160deg, #A414B4 -10%,#2A6FB4 5% 10%, #045397 20% 25%, #5F7DDA 50% 55%, #3D1264 80% 85%);
+  background-image: linear-gradient(160deg, #A414B4 -5%,#2d7dc7 6%, #6a38c7 19% 21%, #0FA8E1 36% 39%, #7a5fda 50% 55%, #3D1264 80% 85%);
   width: 100%;
   height: 100%;
   margin-left: auto;
@@ -209,7 +209,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   width: 100%;
   height: 2px;
-  bottom: -5px;
+  bottom: -14px;
   left: 0;
   background-color: #fff;
   visibility: hidden;
@@ -1161,7 +1161,6 @@ section {
 .contact .info-box {
   background-image: linear-gradient( #B70FFF, #FD1FF5 );
   text-align: center;
-  padding: 20px 0 30px 0;
   align-items: center;
 
 }
