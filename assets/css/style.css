@@ -482,12 +482,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .hero-img {
-  position: absolute;
-  right: 200px;
+  position: fixed;
   width: 300px;
   height: 300px;
   margin: 0px 0px;
-  display: flex;
   justify-content: center;
   align-items: center;
   
@@ -1141,7 +1139,16 @@ section {
   background-image: linear-gradient( #B70FFF, #FD1FF5 );
   text-align: center;
   align-items: center;
+  width: 120px;
+  height: 100px;
 
+}
+
+#contact .cardbx{
+  width: 150px;
+  height: 50px;
+  margin: 20px;
+  margin-bottom: 50px;
 }
 
 .contact .info-box i {
@@ -1463,6 +1470,23 @@ section {
   padding-top: 5px;
   font-size: 13px;
   color: #fff;
+}
+#footer .sci a{
+   font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 20px 20px;
+  margin: 10px;
+  border-radius: 50%;
+  transition: 0.5s;
+  color: #fff;
+  background: rgba(66, 135, 245, 0.5);
+  position: relative;
+}
+#footer .sci:hover a{
+   background: rgba(255, 255, 255, 0.5);;
 }
 
 #footer .credits a {
