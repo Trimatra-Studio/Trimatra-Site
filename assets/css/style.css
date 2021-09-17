@@ -43,15 +43,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track{
-  background: #03071e;
+  background: #642CD2;
   opacity: 0.2;
 
 }
 
 ::-webkit-scrollbar-thumb{
-  background: #cc1c08 ;
-  border-radius: 10px;
-  height: 10%;
+  background: #fff ;
+  height: 5%;
 }
 
 
@@ -762,7 +761,6 @@ section {
 .game .container .btn:hover {
  
   background-color: rgba(29, 102, 230, 1);
-  padding: 9px 24px 9px 27px;
   transform: translateY(1px);
 }
 
