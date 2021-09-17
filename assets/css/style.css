@@ -34,6 +34,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+# Scrollbar
+--------------------------------------------------------------*/
+
+::-webkit-scrollbar{
+  width: 10px;
+  opacity: 0.2;
+}
+
+::-webkit-scrollbar-track{
+  background: #03071e;
+  opacity: 0.2;
+
+}
+
+::-webkit-scrollbar-thumb{
+  background: #cc1c08 ;
+  border-radius: 10px;
+  height: 10%;
+}
+
+
+/*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
@@ -463,16 +485,13 @@ h1, h2, h3, h4, h5, h6 {
 #hero .hero-img {
   position: absolute;
   right: 200px;
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: 300px;
   margin: 0px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 30px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  
 }
 
 #hero .hero-img img{
