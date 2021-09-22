@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/u3124377/public_html/
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp list-games.html $DEPLOYPATH
+    - /bin/cp privacy.html $DEPLOYPATH
