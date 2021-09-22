@@ -86,8 +86,10 @@
     const headerScrolled = () => {
       if (window.scrollY > 100) {
         selectHeader.classList.add('header-scrolled')
+        selectHeader.classList.remove("Title")
       } else {
         selectHeader.classList.remove('header-scrolled')
+        selectHeader.classList.add("Title")
       }
     }
     window.addEventListener('load', headerScrolled)
@@ -161,17 +163,14 @@
   /**
    * Preloader
    */
-  let preloader = select('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove()
-    });
-  }
+   $(window).on("load",function(){
+    $(".loader-wrapper").fadeOut("1000");
+});
 
   /**
    * Testimonials slider
    */
-  new Swiper('.testimonials-slider', {
+  const newLocal = new Swiper('.testimonials-slider', {
     speed: 600,
     loop: true,
     autoplay: {
@@ -283,6 +282,13 @@
     glare: true,
     "max-glare":0.4
   });
+
+  VanillaTilt.init(document.querySelectorAll(".img1 .img2 .img3"), {
+    max: 0,
+    speed: 0,
+    glare: true,
+    "max-glare":0.4
+  });
 document.addEventListener("mousemove" , parallax);
 
 // function parallax(e){
@@ -293,4 +299,54 @@ document.addEventListener("mousemove" , parallax);
 
 //     layer.style.transform = `translateX(${x}px) translateY(${y}px)`
 //   }
-// }
+// }'
+
+// Create cookie
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+// Delete cookie
+function deleteCookie(cname) {
+  const d = new Date();
+  d.setTime(d.getTime() + (24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=;" + expires + ";path=/";
+}
+
+// Read cookie
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+      }
+  }
+  return "";
+}
+
+// Set cookie consent
+function acceptCookieConsent(){
+  deleteCookie('user_cookie_consent');
+  setCookie('user_cookie_consent', 1, 30);
+  document.getElementById("cookieNotice").style.display = "none";
+}
+
+let cookie_consent = getCookie("user_cookie_consent");
+if(cookie_consent != ""){
+    document.getElementById("cookieNotice").style.display = "none";
+}else{
+    document.getElementById("cookieNotice").style.display = "block";
+}
+
+// typed JS
+
