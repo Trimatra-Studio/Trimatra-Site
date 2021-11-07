@@ -86,10 +86,8 @@
     const headerScrolled = () => {
       if (window.scrollY > 100) {
         selectHeader.classList.add('header-scrolled')
-        selectHeader.classList.remove("Title")
       } else {
         selectHeader.classList.remove('header-scrolled')
-        selectHeader.classList.add("Title")
       }
     }
     window.addEventListener('load', headerScrolled)
@@ -348,5 +346,4 @@ if(cookie_consent != ""){
     document.getElementById("cookieNotice").style.display = "block";
 }
 
-// typed JS
 
